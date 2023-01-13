@@ -1,0 +1,15 @@
+➜  docker_image export KUBECONFIG=kubeconfig 
+➜  docker_image kubectl get nodes
+NAME               STATUS     ROLES                      AGE   VERSION
+ip-172-31-15-115   Ready      controlplane,etcd,worker   42h   v1.23.14
+ip-172-31-15-175   Ready      controlplane,etcd,worker   42h   v1.23.14
+ip-172-31-32-103   Ready      controlplane,etcd,worker   42h   v1.23.14
+ip-172-31-78-110   Ready      controlplane,etcd,worker   26h   v1.23.14
+ip-172-31-88-209   NotReady   controlplane,etcd,worker   13h   v1.23.14
+ip-172-31-93-243   Ready      controlplane,etcd,worker   13h   v1.23.14
+➜  docker_image kubectl apply -f lethicia.yml
+namespace/lethicia-andrade unchanged
+deployment.apps/lethicia-teste configured
+service/lethicia-andrade unchanged
+ingress.networking.k8s.io/lethicia-test unchanged
+➜  docker_image 
